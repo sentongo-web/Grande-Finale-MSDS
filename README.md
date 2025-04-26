@@ -3,7 +3,7 @@
 **Best Performing Model: Random Forest Regressor**  
 *Updated: April 2025 | Version 2.1 | Validation R²: 0.921*
 
-![Model Performance Comparison](reports/performance_comparison.png)
+![Model Performance Comparison]
 
 ## 🏆 Final Model Selection
 **Random Forest** demonstrated superior performance with:
