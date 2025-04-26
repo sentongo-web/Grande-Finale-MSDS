@@ -1,0 +1,22 @@
+/* Custom theme */
+:root {
+    --primary: #FFA500;
+    --background: #1A1A1A;
+    --secondary-background: #2D2D2D;
+}
+
+.stApp {
+    background: var(--background);
+    color: white;
+}
+
+.stSidebar {
+    background: var(--secondary-background) !important;
+}
+
+.stSelectbox, .stNumberInput, .stTextInput {
+    background: var(--secondary-background) !important;
+}
+
+.st-bb { border-bottom: 1px solid var(--primary) !important; }
+.st-emotion-cache-1v0mbdj { border-radius: 10px !important; }
