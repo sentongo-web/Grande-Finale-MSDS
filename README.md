@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-# Uganda Import Unit Price Prediction 🚢📦💰
+# Uganda Import Unit Price Prediction 
 
 *A Machine Learning Solution for Accurate Import Cost Forecasting*
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-## 📌 Project Overview
+## Project Overview
 
 **Objective:** Predict unit prices of imported goods in Uganda using advanced machine learning techniques to optimize trade decisions and customs planning.
 
@@ -19,13 +18,13 @@
 
 ## 🚀 Key Features
 
-### 📊 Engineered Features
+### Engineered Features
 - `Value_Density`: Economic value per kilogram
 - `Tax_Load`: Custom duty burden estimation
 - `Import_Duration`: Temporal import patterns
 - `Weight_Value_Ratio`: Freight efficiency metric
 
-### 🧠 Model Architectures
+### Model Architectures
 | Model | Key Parameters | Strengths |
 |-------|----------------|-----------|
 | XGBoost | 1500 trees, 0.005 learning rate | High accuracy, Feature importance |
@@ -33,16 +32,16 @@
 | ANN | 3 hidden layers, Dropout 0.3 | Complex pattern detection |
 | Linear Regression | - | Baseline interpretation |
 
-## 📂 Project Structure
+## Project Structure
 =======
-# Uganda Import Unit Price Prediction 🚢📦💰 - Author - Paul Sentongo - Msc. Data Science and Analytics
+# Uganda Import Unit Price Prediction - Author - Paul Sentongo - Msc. Data Science and Analytics
 
 **Best Performing Model: Random Forest Regressor**  
 *Updated: April 2025 | Version 2.1 | Validation R²: 0.921*
 
 ![Model Performance Comparison]
 
-## 🏆 Final Model Selection
+## Final Model Selection
 **Random Forest** demonstrated superior performance with:
 - **0.4% better R²** than XGBoost
 - **12% lower RMSE** compared to ANN
@@ -62,7 +61,7 @@ best_params = {
 
 final_model = RandomForestRegressor(**best_params, n_jobs=-1, random_state=42)
 
-📈 Updated Performance Metrics
+Updated Performance Metrics
 Validation Results
 Metric	Random Forest	XGBoost	ANN	Linear Regression
 R²	0.921	0.918	0.907	0.752
@@ -82,7 +81,7 @@ Port_of_Shipment_Bell	0.028	0.002
 Quantity_Unit_kg	0.025	0.002
 Mode_of_Transport_Air	0.019	0.001
 
-🛠️ Improvement Roadmap (RF-Focused)
+Improvement Roadmap (RF-Focused)
 1. Hardware Optimization
 # Enable GPU acceleration for faster training
 from sklearn.ensemble import RandomForestRegressor
@@ -136,7 +135,7 @@ drift_detector = ChiSquareDrift(
 preds = model.predict(new_data)
 drift_preds = drift_detector.predict(new_data)
 
-📊 Error Analysis Findings
+Error Analysis Findings
 Residual Distribution
 Residual Analysis
 
@@ -166,7 +165,7 @@ Month	MAE	Coverage
 2023-02	4,098	91%
 2023-03	4,301	87%
 
-🚀 Deployment Architecture
+Deployment Architecture
 graph TD
     A[New Import Data] --> B{Validation}
     B -->|Valid| C[Preprocessing Pipeline]
@@ -178,7 +177,7 @@ graph TD
     G --> I[Drift Detection]
     I -->|Drift| J[Retraining Trigger]
 
-📚 References
+References
 Random Forest Optimization
 Breiman, L. (2001). Random Forests. Machine Learning 45
 
