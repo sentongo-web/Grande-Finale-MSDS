@@ -1,11 +1,12 @@
 import streamlit as st
 from utils.data_loader import load_data
+from utils import load_data
 from utils.visualization import (plot_import_trends, 
                                 show_geo_distribution,
                                 display_kpi_cards)
 
 def render():
-    st.title("🇺🇬 Real-Time Import Dashboard")
+    st.title("Welcome: UG Real-Time Import Dashboard")
     
     # Load data
     df = load_data()

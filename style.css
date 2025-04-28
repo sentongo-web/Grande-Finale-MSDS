@@ -1,22 +1,135 @@
-/* Custom theme */
+/* Custom Theme for Paul's Import Price Prediction App */
+
+/* Base Colors */
 :root {
-    --primary: #FFA500;
-    --background: #1A1A1A;
-    --secondary-background: #2D2D2D;
+    --primary: #ffffff; /* White text */
+    --background: #0B0B0F; /* Very dark background */
+    --secondary-background: #16161D; /* Slightly lighter dark */
+    --accent: #00BFFF; /* Soft Blue Accent */
+    --input-background: #1F1F2A; /* Darker input fields */
 }
 
+/* Global App Background */
 .stApp {
-    background: var(--background);
-    color: white;
+    background: linear-gradient(135deg, var(--background) 0%, #12121A 100%);
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
 }
 
+/* Sidebar */
 .stSidebar {
     background: var(--secondary-background) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-right: 1px solid var(--accent);
+    padding-top: 20px;
 }
 
+/* Inputs Styling */
 .stSelectbox, .stNumberInput, .stTextInput {
-    background: var(--secondary-background) !important;
+    background-color: var(--input-background) !important;
+    color: var(--primary) !important;
+    border: 1px solid var(--accent) !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    transition: all 0.3s ease !important;
 }
 
-.st-bb { border-bottom: 1px solid var(--primary) !important; }
-.st-emotion-cache-1v0mbdj { border-radius: 10px !important; }
+/* Inputs on Focus */
+.stSelectbox:focus, .stNumberInput:focus, .stTextInput:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 8px var(--accent) !important;
+}
+
+/* General Borders */
+.st-bb {
+    border-bottom: 1px solid var(--accent) !important;
+}
+
+/* Cards and Containers */
+.st-emotion-cache-1v0mbdj {
+    border-radius: 14px !important;
+    background: var(--secondary-background) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    padding: 24px !important;
+}
+
+/* Button Styling */
+button {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 10px;
+    color: var(--background);
+    font-weight: bold;
+    padding: 12px 24px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1E90FF;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: var(--primary);
+    text-shadow: 0 0 5px var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Social Links Hover Effects */
+a[target="_blank"] {
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    color: var(--primary) !important;
+}
+
+a[target="_blank"]:hover {
+    border-bottom-color: var(--accent);
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px var(--accent);
+}
+
+/* Footer Container */
+div[data-testid="stMarkdownContainer"] > div:last-child {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: var(--secondary-background);
+    border-radius: 12px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Text Styling */
+div[data-testid="stMarkdownContainer"] > div:last-child p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+/* Footer HR Style */
+div[data-testid="stMarkdownContainer"] > div:last-child hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem auto;
+    width: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stSidebar {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    
+    div[data-testid="stMarkdownContainer"] > div:last-child {
+        padding: 1rem;
+    }
+    
+    a[target="_blank"] {
+        font-size: 0.9rem;
+    }
+}
